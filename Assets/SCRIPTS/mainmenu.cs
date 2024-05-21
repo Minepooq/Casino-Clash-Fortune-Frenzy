@@ -8,12 +8,14 @@ public class mainmenu : MonoBehaviour
 {
     private int quit = 0;
     public GameObject exit;
+
     // Start is called before the first frame update
     public void playgame()
     {
         if(quit == 0)
         {
             SceneManager.LoadScene(0);
+
         }
         
     }
