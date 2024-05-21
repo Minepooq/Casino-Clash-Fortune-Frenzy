@@ -73,6 +73,7 @@ public class CharacterController2D : MonoBehaviour
     }
     private void Update()
     {
+
         if (isDashing)
         {
             return;
@@ -211,6 +212,7 @@ public class CharacterController2D : MonoBehaviour
 
     private IEnumerator Dash()
     {
+        
         
             canDash = false;
             isDashing = true;
