@@ -72,6 +72,7 @@ public class ENEMYAI : MonoBehaviour
 
     public float coinheight;
 
+    public float gravity;
     public int TEST;
     // Start is called before the first frame update
 
@@ -101,6 +102,7 @@ public class ENEMYAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (enemyhp <= 0)
         {
             gameObject.SetActive(false);
