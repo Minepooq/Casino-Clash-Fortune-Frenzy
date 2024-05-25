@@ -6,56 +6,58 @@ using UnityEngine;
 
 public class enemyattack : MonoBehaviour
 {
-    public int playerhealth = 4;
-
-    public float timeBtwAttack = 2f;
+    
     public Transform attackPos;
     public LayerMask playerLayer;
     public float attackRange;
     public int Damage;
+    private GameObject player;
+    private float timer;
+    public float startdist = 4;
+    public float timerstart;
 
-    // Start is called before the first frame update
+    
+
+    
     void Start()
     {
-
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-
+    
     // Update is called once per frame
+    
     void Update()
     {
-        if (timeBtwAttack <= 0)
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(new Vector3(attackPos.position.x, attackPos.position.y + 0.3f, attackPos.position.z), attackRange, playerLayer);
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        if (distance < startdist)
         {
-           
-            Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(new Vector3(attackPos.position.x, attackPos.position.y + 0.3f, attackPos.position.z), attackRange, playerLayer);
-
-            for (int i = 0; i < enemiesToDamage.Length; i++)
+            timer += Time.deltaTime;
+            if (timer > timerstart)
             {
-                enemiesToDamage[i].GetComponent<playerattack>().TakeDamage(Damage);
-
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<playerattack>().TakeDamage(Damage);
+                    
+                }
+                //timeBtwAttack = timebtwattackstart;
+                timer = 0;
+                
             }
-            timeBtwAttack = 2f;
-
-
-
         }
-        else
-        {
-            if (timeBtwAttack > 0)
-            {
-                timeBtwAttack -= Time.deltaTime;
-            }
-
-
-        }
+        Debug.Log(timer);
 
 
 
 
 
     }
-
-
+    
+    
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(new Vector3(attackPos.position.x, attackPos.position.y + 0.3f, attackPos.position.z), attackRange);
