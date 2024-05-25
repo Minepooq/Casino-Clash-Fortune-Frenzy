@@ -11,6 +11,7 @@ public class camerashot : MonoBehaviour
     private float timer;
     public float startdist = 4;
     public float timerstart;
+    private bool cansee = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class camerashot : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
   
-        if(distance < startdist)
+        if(distance < startdist && cansee == true)
         {
             timer += Time.deltaTime;
             if (timer > timerstart)
@@ -39,5 +40,28 @@ public class camerashot : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, bulletpos.position, Quaternion.identity);   
+    }
+    private void FixedUpdate()
+    {
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
+        if (ray.collider != null)
+        {
+
+            cansee = ray.collider.CompareTag("Player");
+            if (cansee == true)
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.green);
+            }
+            if (cansee == false)
+            {
+                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.red);
+            }
+
+
+
+
+
+
+        }
     }
 }

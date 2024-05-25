@@ -10,7 +10,7 @@ public class enemybulletscript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private playerattack script;
-    private bool cansee = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,36 +32,21 @@ public class enemybulletscript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && cansee == true)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log(1);
+           
             Destroy(gameObject);
             collision.gameObject.GetComponent<playerattack>().playerhealth -= Damage;
             
         }
-    }
-
-    private void FixedUpdate()
-    {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
-        if (ray.collider != null)
+        if (collision.gameObject.CompareTag("Platform"))
         {
             
-            cansee = ray.collider.CompareTag("Player");
-            if (cansee == true)
-            {
-                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.green);
-            }
-            if (cansee == false)
-            {
-                Debug.DrawRay(transform.position, player.transform.position - transform.position, Color.red);
-            }
-
-
-
-
-
+            Destroy(gameObject);
+            
 
         }
     }
+
+    
 }

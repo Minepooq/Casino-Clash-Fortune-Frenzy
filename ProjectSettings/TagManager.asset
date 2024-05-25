@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - knockback
   - wall
+  - Platform
   layers:
   - Default
   - TransparentFX
