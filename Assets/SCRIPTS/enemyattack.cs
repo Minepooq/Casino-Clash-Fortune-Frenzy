@@ -48,7 +48,7 @@ public class enemyattack : MonoBehaviour
                 
             }
         }
-        Debug.Log(timer);
+        
 
 
 

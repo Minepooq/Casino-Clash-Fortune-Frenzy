@@ -12,10 +12,12 @@ public class camerashot : MonoBehaviour
     public float startdist = 4;
     public float timerstart;
     private bool cansee = false;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,12 +29,18 @@ public class camerashot : MonoBehaviour
   
         if(distance < startdist && cansee == true)
         {
+            animator.SetBool("cansee", true);
             timer += Time.deltaTime;
             if (timer > timerstart)
             {
+                
                 timer = 0;
                 shoot();
             }
+        }
+        else
+        {
+            animator.SetBool("cansee", false);
         }
         
     }

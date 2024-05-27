@@ -75782,6 +75782,7 @@ GameObject:
   - component: {fileID: 1167669812}
   - component: {fileID: 1167669814}
   - component: {fileID: 1167669813}
+  - component: {fileID: 1167669816}
   m_Layer: 0
   m_Name: CCTV CAMERA
   m_TagString: Untagged
@@ -75798,7 +75799,7 @@ Transform:
   m_GameObject: {fileID: 1167669811}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0.7071068, z: 0, w: -0}
-  m_LocalPosition: {x: 49.57, y: 27.262, z: 0}
+  m_LocalPosition: {x: 49.604, y: 27.268, z: 0}
   m_LocalScale: {x: 4.64, y: 4.64, z: 4.64}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -75819,7 +75820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5049901313262161769, guid: 0ca80c9980188d3468e6a644a4087bd1, type: 3}
   bulletpos: {fileID: 1853238407}
-  startdist: 11
+  startdist: 7.3
   timerstart: 1.5
 --- !u!212 &1167669814
 SpriteRenderer:
@@ -75873,6 +75874,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1167669816
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167669811}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 562ed9f0fecfd474f918936b587f1641, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1189175805
 GameObject:
   m_ObjectHideFlags: 0

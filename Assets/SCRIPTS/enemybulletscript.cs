@@ -17,9 +17,13 @@ public class enemybulletscript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
         
+        //direction of shot 
         Vector3 direction = player.transform.position - transform.position;
+        //velocity of the shot with added force 
         rb.velocity = new Vector2 (direction.x, direction.y).normalized * force;   
 
+        //didnt know how to do it so I searched it up 
+        //barely understand 
         float rot = MathF.Atan2(-direction.x, direction.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, rot);
 
@@ -36,6 +40,7 @@ public class enemybulletscript : MonoBehaviour
         {
            
             Destroy(gameObject);
+            //figured this out which was a life saver 
             collision.gameObject.GetComponent<playerattack>().playerhealth -= Damage;
             
         }
