@@ -426,6 +426,7 @@ Transform:
   m_LocalScale: {x: 1.4022787, y: 1.4022787, z: 1.4022787}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1160876380}
   - {fileID: 224130894}
   - {fileID: 1335776245}
   - {fileID: 759725206}
@@ -1000,6 +1001,7 @@ GameObject:
   - component: {fileID: 171417052}
   - component: {fileID: 171417051}
   - component: {fileID: 171417050}
+  - component: {fileID: 171417053}
   m_Layer: 0
   m_Name: emptysword (4)
   m_TagString: Untagged
@@ -1070,7 +1072,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -1102,7 +1104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8087404863474408229, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
+  m_Sprite: {fileID: -2204485384043992604, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1120,6 +1122,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171417048}
   m_CullTransparentMesh: 1
+--- !u!114 &171417053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171417048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &190854872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1227,6 +1251,7 @@ GameObject:
   - component: {fileID: 224130897}
   - component: {fileID: 224130896}
   - component: {fileID: 224130895}
+  - component: {fileID: 224130898}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -1297,13 +1322,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 820255815}
+        m_TargetAssemblyTypeName: swordselection, Assembly-CSharp
+        m_MethodName: s1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1347,6 +1372,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 224130893}
   m_CullTransparentMesh: 1
+--- !u!114 &224130898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224130893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &368440828
 GameObject:
   m_ObjectHideFlags: 0
@@ -2287,6 +2334,7 @@ GameObject:
   - component: {fileID: 759725209}
   - component: {fileID: 759725208}
   - component: {fileID: 759725207}
+  - component: {fileID: 759725210}
   m_Layer: 0
   m_Name: goldsword
   m_TagString: Untagged
@@ -2357,13 +2405,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 820255815}
+        m_TargetAssemblyTypeName: swordselection, Assembly-CSharp
+        m_MethodName: s3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2407,6 +2455,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 759725205}
   m_CullTransparentMesh: 1
+--- !u!114 &759725210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759725205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &813682717
 GameObject:
   m_ObjectHideFlags: 0
@@ -2613,6 +2683,7 @@ GameObject:
   - component: {fileID: 820255814}
   - component: {fileID: 820255813}
   - component: {fileID: 820255812}
+  - component: {fileID: 820255815}
   m_Layer: 0
   m_Name: emptysword (5)
   m_TagString: Untagged
@@ -2683,7 +2754,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -2715,7 +2786,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8087404863474408229, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
+  m_Sprite: {fileID: -2204485384043992604, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2733,6 +2804,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 820255810}
   m_CullTransparentMesh: 1
+--- !u!114 &820255815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820255810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &824031894
 GameObject:
   m_ObjectHideFlags: 0
@@ -3089,6 +3182,126 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1160876376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160876380}
+  - component: {fileID: 1160876379}
+  - component: {fileID: 1160876378}
+  - component: {fileID: 1160876377}
+  m_Layer: 0
+  m_Name: highlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1160876377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160876376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.690566, g: 0.690566, b: 0.690566, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1160876378}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1160876378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160876376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 1072512264, guid: 3e46a9ff1e6611440b55ea326d4a9d56, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1160876379
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160876376}
+  m_CullTransparentMesh: 1
+--- !u!224 &1160876380
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160876376}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.14, y: 1.14, z: 1.14}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 100144932}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -283, y: 33.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1202955853
 GameObject:
   m_ObjectHideFlags: 0
@@ -3368,6 +3581,7 @@ GameObject:
   - component: {fileID: 1335776248}
   - component: {fileID: 1335776247}
   - component: {fileID: 1335776246}
+  - component: {fileID: 1335776249}
   m_Layer: 0
   m_Name: ironsword
   m_TagString: Untagged
@@ -3438,13 +3652,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 820255815}
+        m_TargetAssemblyTypeName: swordselection, Assembly-CSharp
+        m_MethodName: s2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3488,6 +3702,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335776244}
   m_CullTransparentMesh: 1
+--- !u!114 &1335776249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335776244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &1351002289
 GameObject:
   m_ObjectHideFlags: 0
@@ -3575,6 +3811,7 @@ GameObject:
   - component: {fileID: 1362829859}
   - component: {fileID: 1362829858}
   - component: {fileID: 1362829857}
+  - component: {fileID: 1362829860}
   m_Layer: 0
   m_Name: emptysword
   m_TagString: Untagged
@@ -3645,7 +3882,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -3695,6 +3932,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1362829855}
   m_CullTransparentMesh: 1
+--- !u!114 &1362829860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362829855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &1393475135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,6 +4898,7 @@ GameObject:
   - component: {fileID: 1733606004}
   - component: {fileID: 1733606003}
   - component: {fileID: 1733606002}
+  - component: {fileID: 1733606005}
   m_Layer: 0
   m_Name: emptysword (1)
   m_TagString: Untagged
@@ -4709,7 +4969,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -4741,7 +5001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8087404863474408229, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
+  m_Sprite: {fileID: -2204485384043992604, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4759,6 +5019,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733606000}
   m_CullTransparentMesh: 1
+--- !u!114 &1733606005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733606000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &1788081598
 GameObject:
   m_ObjectHideFlags: 0
@@ -5109,6 +5391,7 @@ GameObject:
   - component: {fileID: 2000858842}
   - component: {fileID: 2000858841}
   - component: {fileID: 2000858840}
+  - component: {fileID: 2000858843}
   m_Layer: 0
   m_Name: emptysword (2)
   m_TagString: Untagged
@@ -5179,7 +5462,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -5211,7 +5494,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8087404863474408229, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
+  m_Sprite: {fileID: -2204485384043992604, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5229,6 +5512,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000858838}
   m_CullTransparentMesh: 1
+--- !u!114 &2000858843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000858838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &2029304575
 GameObject:
   m_ObjectHideFlags: 0
@@ -5412,6 +5717,7 @@ GameObject:
   - component: {fileID: 2068900858}
   - component: {fileID: 2068900857}
   - component: {fileID: 2068900856}
+  - component: {fileID: 2068900859}
   m_Layer: 0
   m_Name: emptysword (3)
   m_TagString: Untagged
@@ -5482,7 +5788,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 820255815}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -5514,7 +5820,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8087404863474408229, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
+  m_Sprite: {fileID: -2204485384043992604, guid: 2f646bbc82a0dc042a298609ef4ac2b5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5532,6 +5838,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2068900854}
   m_CullTransparentMesh: 1
+--- !u!114 &2068900859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068900854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e748e263bb5fa774f9bf766d267e9c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sword: {fileID: 224130893}
+  sword2: {fileID: 1335776244}
+  sword3: {fileID: 759725205}
+  sword4: {fileID: 1362829855}
+  sword5: {fileID: 1733606000}
+  sword6: {fileID: 2000858838}
+  sword7: {fileID: 2068900854}
+  sword8: {fileID: 171417048}
+  sword9: {fileID: 820255810}
+  highlight: {fileID: 1160876376}
 --- !u!1 &2073696652
 GameObject:
   m_ObjectHideFlags: 0
