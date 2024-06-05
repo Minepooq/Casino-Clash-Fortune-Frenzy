@@ -10,13 +10,13 @@ public class enemybulletscript : MonoBehaviour
     private Rigidbody2D rb;
     public float force;
     private playerattack script;
-    
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindGameObjectWithTag("Player");
-        
+        animator = player.GetComponent<Animator>();
         //direction of shot 
         Vector3 direction = player.transform.position - transform.position;
         //velocity of the shot with added force 
@@ -42,7 +42,7 @@ public class enemybulletscript : MonoBehaviour
             Destroy(gameObject);
             //figured this out which was a life saver 
             collision.gameObject.GetComponent<playerattack>().playerhealth -= Damage;
-            
+            animator.SetTrigger("takedamage");
         }
         if (collision.gameObject.CompareTag("Platform"))
         {

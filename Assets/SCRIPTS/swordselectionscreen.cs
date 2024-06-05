@@ -1,49 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 
-public class mainmenu : MonoBehaviour
+public class swordselectionscreen : MonoBehaviour
 {
     private int quit = 0;
     public GameObject exit;
     public int scenenumber;
-    public static GameObject playtrue;
-    public static bool istrue = true;
+    public static bool playtrue;
+    [SerializeField]
+    public static GameObject sw;
+    public GameObject grey;
     // Start is called before the first frame update
 
     public void Start()
     {
-
+        sw = gameObject;
+        gameObject.SetActive(false);
     }
-
-    public void playgame()
+    public void superman()
     {
-        if(quit == 0)
-        {
-            istrue = false;
-            SceneManager.UnloadSceneAsync(scenenumber);
-            swordselectionscreen.sw.gameObject.SetActive(true);
-        }
-        
+        gameObject.SetActive(false);
+
     }
-    
+
 
     public void quitgame()
     {
-        if(quit == 1)
+        if (quit == 1)
         {
             Application.Quit();
             Debug.Log("quitgame");
         }
-        
+
     }
     public void Update()
     {
-        
+ 
         
         if (Input.GetKeyDown(KeyCode.Escape))
         {

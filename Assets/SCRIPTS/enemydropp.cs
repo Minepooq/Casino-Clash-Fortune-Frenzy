@@ -33,7 +33,6 @@ public class enemydropp : MonoBehaviour
 
 
         int side = Random.Range(-right, right);
-        Debug.Log(side);
         forcedirection = new Vector2(side, coinup);
         rb.AddForce(forcedirection, ForceMode2D.Impulse);
         

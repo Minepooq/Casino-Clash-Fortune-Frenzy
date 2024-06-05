@@ -23,6 +23,7 @@ public class buttonscript : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("helloworld");
             animator.SetBool("touchmethere", true);
             destroy.SetActive(false);
         }

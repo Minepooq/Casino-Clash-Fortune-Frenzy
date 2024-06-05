@@ -12,30 +12,37 @@ public class playermovement : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
+    public GameObject swordselectionscreen;
     
     //part of unity animation toolkit
     public Animator animator;
-    void Update()
+    void Update() 
     {
-        //gets the horizontal movement of the charachter 
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        
-        
-        if (Input.GetButtonDown("Crouch"))
+        if(!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false)
         {
-            crouch = true;
+            //gets the horizontal movement of the charachter 
+            horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+
+
+            if (Input.GetButtonDown("Crouch"))
+            {
+                crouch = true;
+            }
+            else if (Input.GetButtonUp("Crouch"))
+            {
+                crouch = false;
+            }
         }
-        else if (Input.GetButtonUp("Crouch"))
-        {
-            crouch = false;
-        }
+       
+        
     }
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
-        //jump = false;
-
+        if (!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false)
+        {
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        }
     }
 
 }

@@ -20,7 +20,7 @@ public class playerattack : MonoBehaviour
     public GameObject heart;
     public GameObject heart1;
     public GameObject heart2;
-
+    public Animator playerhurt;
 
     // Start is called before the first frame update
     void Start()
@@ -31,9 +31,8 @@ public class playerattack : MonoBehaviour
     {
 
         playerhealth -= Damage;
-
-
-
+        playerhurt.SetTrigger("takedamage");
+        
 
     }
 
@@ -58,49 +57,13 @@ public class playerattack : MonoBehaviour
         }
         
         
-        if(timeBtwAttack <= 0) 
-        {
-            //if the user left clicks set the animator to "attack" phase
-            if(Input.GetKeyDown(KeyCode.Mouse0)){
-                animator.SetTrigger("attack");
-                
-                
-                //if the sword overlaps with the enemy then deal x amount of damage with (Damage variable used in enemyhealth.cs)
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(new Vector3 (attackPos.position.x, attackPos.position.y + 0.3f, attackPos.position.z), attackRange, enemyLayer);
-                
-                
-                for(int i = 0; i < enemiesToDamage.Length; i++) 
-                {
-                    enemiesToDamage[i].GetComponent<ENEMYAI>().TakeDamage(Damage);
-                    
-                    
-                }
-                //time between attack (resets the timer here)
-                timeBtwAttack = 0.65f;
-            }
-            
-
-        }
-        else 
-        {
-            //if the time between attacks greater than 0 then - it until it is 0 then goes back up to
-            //(if(timeBtwAttack <= 0) and allows user to re-attack
-            if(timeBtwAttack > 0)
-            {
-                timeBtwAttack -= Time.deltaTime;
-            }
-            
-            
-        }
+       
         
         
         
         
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(new Vector3(attackPos.position.x, attackPos.position.y + 0.3f, attackPos.position.z), attackRange);
-    }
+    
 
 
 }

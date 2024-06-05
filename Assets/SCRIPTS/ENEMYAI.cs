@@ -74,9 +74,19 @@ public class ENEMYAI : MonoBehaviour
 
     public float gravity;
     public int TEST;
+    public Animator enemyhurt;
     // Start is called before the first frame update
 
     
+    
+    void Start()
+    {
+        enemyhurt = GetComponent<Animator>();
+        coinn.SetActive(false);
+
+        rb2d = GetComponent<Rigidbody2D>();
+
+    }
     public void TakeDamage(int Damage)
     {
         m_NewForce = new Vector2(knockback_direction * knockbackForcex, knockbackForcey);
@@ -84,20 +94,13 @@ public class ENEMYAI : MonoBehaviour
 
         enemyhp -= Damage;
         //creates a log just to check if hit or not
-        
+
         damageTaken = true;
         knockbacktime = 0.5f;
+        enemyhurt.SetTrigger("hit");
 
-        
 
     }
-    void Start()
-    {
-        coinn.SetActive(false);
-
-        rb2d = GetComponent<Rigidbody2D>();
-    }
-    
 
     // Update is called once per frame
     void Update()

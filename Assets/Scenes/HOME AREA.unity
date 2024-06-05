@@ -27463,8 +27463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec4b912f14919c1448d42169835bc42c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1718226186}
-  knockback: {fileID: 959109598}
+  Player: {fileID: 0}
+  knockback: {fileID: 0}
   agroRange: 10
   moveSpeed: 3
   mspeed: 2
@@ -73982,7 +73982,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 38.82998, y: 24.01, z: -11.516801}
+  m_LocalPosition: {x: 76.129974, y: 26.73, z: -11.766801}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -75076,7 +75076,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 404baffb3aecf6a45a3ed6250bb73da5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 956733620}
+  coinText: {fileID: 0}
+  ironswordequip: {fileID: 0}
+  CurrentCoins: 0
 --- !u!1 &959109597
 GameObject:
   m_ObjectHideFlags: 0
@@ -75871,7 +75873,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &1167669816
@@ -76257,7 +76259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 479eb2fbf9ac18649a23d62c3034f9f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1718226186}
+  Player: {fileID: 0}
   magnetrange: 2
   magnetspeed: 8
   see: {fileID: 1250285236}
@@ -77029,7 +77031,7 @@ Transform:
   m_GameObject: {fileID: 1516507926}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -37.299995, y: -2.7199993, z: 0.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -77055,7 +77057,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 1718226186}
+  m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
@@ -77507,6 +77509,7 @@ MonoBehaviour:
   walljumpheight: 26.3
   walljumpwidth: 51.1
   walljump: {x: 5.48, y: 10.85}
+  swordselectionscreen: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -77527,6 +77530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1718226190}
   runSpeed: 25
+  swordselectionscreen: {fileID: 0}
   animator: {fileID: 1718226184}
 --- !u!114 &1718226192
 MonoBehaviour:
@@ -77556,6 +77560,7 @@ MonoBehaviour:
   heart: {fileID: 1695751922}
   heart1: {fileID: 1387226351}
   heart2: {fileID: 2129709686}
+  playerhurt: {fileID: 0}
 --- !u!114 &1718226193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77702,9 +77707,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518e5dfa913ce6b40977671ceb3ef5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1718226190}
-  movement: {fileID: 1718226191}
-  attack: {fileID: 1718226192}
 --- !u!1 &1726239277
 GameObject:
   m_ObjectHideFlags: 0
@@ -78038,7 +78040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062b6733136881a4e9a9c667cd050fb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1718226186}
+  Player: {fileID: 0}
   magnetrange: 2
   magnetspeed: 8
   magnetwait: 0
@@ -78492,9 +78494,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 518e5dfa913ce6b40977671ceb3ef5ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1718226184}
-  movement: {fileID: 0}
-  attack: {fileID: 0}
 --- !u!1 &1937679901
 GameObject:
   m_ObjectHideFlags: 0
@@ -78862,7 +78861,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1718226195}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: SCRIPTLOADER, Assembly-CSharp
         m_MethodName: playpress
         m_Mode: 1

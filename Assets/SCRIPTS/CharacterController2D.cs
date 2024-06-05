@@ -35,6 +35,7 @@ public class CharacterController2D : MonoBehaviour
     public float walljumpheight;
     public float walljumpwidth;
     public Vector2 walljump;
+    public GameObject swordselectionscreen;
     //private float dashcooldown = 0;
 
 
@@ -81,16 +82,20 @@ public class CharacterController2D : MonoBehaviour
 
         if (doublejump < 2)
         {
-            if (Input.GetButtonDown("Jump"))
+            if(!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false)
             {
-                m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
-                doublejump++;
-            }
+                if (Input.GetButtonDown("Jump"))
+                {
+                    m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_JumpForce);
+                    doublejump++;
+                }
 
-            if (Input.GetButtonUp("Jump") && m_Rigidbody2D.velocity.y > 0f)
-            {
-                m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.y * 0.7f);
+                if (Input.GetButtonUp("Jump") && m_Rigidbody2D.velocity.y > 0f)
+                {
+                    m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, m_Rigidbody2D.velocity.y * 0.7f);
+                }
             }
+            
 
         }
         else if (m_Grounded == true)
@@ -212,8 +217,8 @@ public class CharacterController2D : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        
-        
+        if(!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false)
+        {
             canDash = false;
             isDashing = true;
             float originalGravity = m_Rigidbody2D.gravityScale;
@@ -226,6 +231,8 @@ public class CharacterController2D : MonoBehaviour
             isDashing = false;
             yield return new WaitForSeconds(dashingCooldown);
             canDash = true;
+        }
+            
         
             
         
