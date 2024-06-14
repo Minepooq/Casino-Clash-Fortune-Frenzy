@@ -9,6 +9,7 @@ TagManager:
   - knockback
   - wall
   - Platform
+  - startbutton
   layers:
   - Default
   - TransparentFX
