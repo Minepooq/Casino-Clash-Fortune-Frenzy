@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class coincounter : MonoBehaviour
@@ -21,11 +22,13 @@ public class coincounter : MonoBehaviour
     
     void Awake()
     {
-
+        
         instance = this;
     }
     void Start()
     {
+        SceneManager.LoadSceneAsync("MAIN MENU");
+        CurrentCoins = GameManager.coins;
         coins = GameObject.FindGameObjectWithTag("coins");
         ironswordequip.text = "LOCKED";
         coinText.text = CurrentCoins.ToString();
@@ -49,6 +52,7 @@ public class coincounter : MonoBehaviour
 
     public void Update()
     {
+        Debug.Log(GameManager.coins);
         if (playerattack.isrestart == true)
         {
             Debug.Log("testing");

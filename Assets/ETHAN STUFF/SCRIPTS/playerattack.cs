@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class playerattack : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class playerattack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         youdiedscreen.SetActive(false);
         youdied.SetActive(false);
         thisgameobjectpleaseworkdaddy = GetComponent<GameObject>();
@@ -47,7 +49,7 @@ public class playerattack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isyoudiedscreenactive == true)
+        if (isyoudiedscreenactive == true)
         {
             youdiedscreen.SetActive(true);
             isyoudiedscreenactive = false;

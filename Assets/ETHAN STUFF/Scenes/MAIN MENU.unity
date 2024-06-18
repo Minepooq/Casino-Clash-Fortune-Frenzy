@@ -1377,7 +1377,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1008734009}
         m_TargetAssemblyTypeName: settingscript, Assembly-CSharp
-        m_MethodName: quit
+        m_MethodName: casino
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

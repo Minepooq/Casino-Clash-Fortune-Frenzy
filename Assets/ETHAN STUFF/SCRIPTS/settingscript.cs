@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class settingscript : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class settingscript : MonoBehaviour
 
     void Start()
     {
+        
         allbuttons.SetActive(false);   
     }
 
@@ -46,8 +49,10 @@ public class settingscript : MonoBehaviour
         allbuttons.SetActive(false);    
 
     }
-    public void options()
+    public void casino()
     {
-
+        SceneManager.LoadScene("casinomenu");
+        buttonsisactive = 0;    
+        allbuttons.SetActive(false);    
     }
 }
