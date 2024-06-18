@@ -114,6 +114,10 @@ public class ENEMYAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(enemyhp > 0)
+        {
+            gameObject.SetActive(true); 
+        }
         if(playerattack.isrestart == true)
         {
             enemyhp = 6; 

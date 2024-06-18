@@ -16,9 +16,9 @@ public class playermovement : MonoBehaviour
     
     //part of unity animation toolkit
     public Animator animator;
-    void Update() 
+    void Update()
     {
-        if(!swordselectionscreen.activeInHierarchy || mainmenu.istrue == false)
+        if (!swordselectionscreen.activeInHierarchy || mainmenu.istrue == false || playerattack.dead == false)
         {
             //gets the horizontal movement of the charachter 
             horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -39,7 +39,7 @@ public class playermovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        if (!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false)
+        if (!swordselectionscreen.activeInHierarchy && mainmenu.istrue == false || playerattack.dead == false)
         {
             controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         }

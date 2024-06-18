@@ -31,7 +31,7 @@ public class CharacterController2D : MonoBehaviour
     private int doublejump;
     Vector2 force;
     [SerializeField] private TrailRenderer tr;
-    private int supernigga;
+    private int dbj;
     public float walljumpheight;
     public float walljumpwidth;
     public Vector2 walljump;
@@ -108,11 +108,11 @@ public class CharacterController2D : MonoBehaviour
         }
         if (m_FacingRight == true)
         {
-            supernigga = 1;
+            dbj = 1;
         }
         if (m_FacingRight == false)
         {
-            supernigga = -1;
+            dbj = -1;
         }
         
 
@@ -223,7 +223,7 @@ public class CharacterController2D : MonoBehaviour
             isDashing = true;
             float originalGravity = m_Rigidbody2D.gravityScale;
             m_Rigidbody2D.gravityScale = 0f;
-            m_Rigidbody2D.velocity = new Vector2(supernigga * transform.localScale.x * dashingPower, 0f);
+            m_Rigidbody2D.velocity = new Vector2(dbj * transform.localScale.x * dashingPower, 0f);
             tr.emitting = true;
             yield return new WaitForSeconds(dashingTime);
             tr.emitting = false;

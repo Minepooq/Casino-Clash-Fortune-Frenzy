@@ -10,7 +10,7 @@ public class coincounter : MonoBehaviour
     public static coincounter instance;
     [SerializeField]
     private AudioClip money;
-
+    private GameObject coins;
     private AudioSource audioSource;
     public Text coinText;
     public Text ironswordequip;
@@ -18,13 +18,15 @@ public class coincounter : MonoBehaviour
     public bool boughtironsword = false;
     // Start is called before the first frame update
     
+    
     void Awake()
     {
+
         instance = this;
     }
     void Start()
     {
-
+        coins = GameObject.FindGameObjectWithTag("coins");
         ironswordequip.text = "LOCKED";
         coinText.text = CurrentCoins.ToString();
     }
@@ -45,7 +47,15 @@ public class coincounter : MonoBehaviour
         
     }
 
-
+    public void Update()
+    {
+        if (playerattack.isrestart == true)
+        {
+            Debug.Log("testing");
+            coins.SetActive(true);
+            playerattack.isrestart = false;
+        }
+    }
 
     // Update is called once per frame
     public void IncreaseCoins()

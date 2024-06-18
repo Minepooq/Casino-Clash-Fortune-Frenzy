@@ -27,6 +27,7 @@ public class moneycounter : MonoBehaviour
     }
     private void Update()
     {
+        
         float distToPlayer = Vector2.Distance(transform.position, Player.position);
         if (magnetwait <= 0)
         {

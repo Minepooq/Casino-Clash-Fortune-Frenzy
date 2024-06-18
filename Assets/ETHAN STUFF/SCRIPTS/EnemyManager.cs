@@ -1,16 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
     public GameObject enemy;
-    public settingscript settingscript;
+    private Transform enemypos;
     public playerattack playerattack;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemypos = transform;
     }
 
     // Update is called once per frame
@@ -18,10 +19,14 @@ public class EnemyManager : MonoBehaviour
     {
         if(playerattack.isrestart == true)
         {
-            Debug.Log("works");
-            enemy.SetActive(true); 
-            playerattack.isrestart = false; 
+            enemygen();
+            playerattack.isrestart = false;
         }
 
+    }
+
+    public void enemygen()
+    {
+        Instantiate(enemy, enemypos.position, Quaternion.identity);
     }
 }
